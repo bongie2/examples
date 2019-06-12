@@ -2,8 +2,14 @@
     background-color:aqua;
     color: blue;
     width: 100px;
-    
+    border:solid black
     }
     .page-style{
         background-color: lavender;
             }
+            .mst-card{
+                background-color: antiquewhite;
+                color: blue;
+
+            }
+           

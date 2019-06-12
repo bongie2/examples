@@ -1,33 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<body class="page-style">
+
   <div style="text-align:center" class="page-style">
   <h1>
     Welcome to {{title}}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2 class="page-style">Here are some links to help you start: </h2>
-<ul class="page-style">
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
 <!--<button *ngFor="let Fruit of Fruits" class="btn" (click)="removeFruits(Fruit)">
   {{Fruit}}
 </button>-->
 <br>
 <br>
-<!--<ul>
-  <li *ngRepeat= "X in MyLists">{{X}}</li>
-</ul>
-
+<!--
 <input [(ngModel)]="newLine"/>
   <button (click)="AddNew(newLine)">Add</button>-->
   <!--<ul *ngFor="let list of lists" class="page-style">
@@ -36,15 +20,57 @@
        </ul>
  <input [(ngModel)]="newlist"/>
  <button (click)="AddNew(list)" class="btn">Add list</button>
- -->
- <input [(ngModel)]="newLine"/>
- <button (click)="AddNew(newLine)">Add</button>-->
- <ul *ngFor="let list of lists" class="page-style">
-    {{list}}
-     <button (click)="AddNew(list)" class="btn">add</button>
-      </ul>
-  <form>
+ --> 
+ 
+    <!--<ul *ngFor="let list of lists" class="page-style">
+      {{list}}
+      <button (click)="editlist(list)">Edit</button>
+      <button (click)="RemoveList(list)" class="btn">Delete</button>
+       </ul>
+ <input [(ngModel)]="newlist" onfocus=""/>
+ <button (click)="AddNew(list)" class="btn">Add list</button>-->
+<!-- <input placeholder="enter taskName" [(ngModel)]="newTask"/>
+ <input placeholder="enter priority" [(ngModel)]="newPriority"/>
+ <button (click)="addNew()">Add task</button>
 
-</form> 
+ <ul *ngFor="let task of tasks">
+   {{task.taskName}}
+   {{task.priority}}
+   <button (click)="editTask(task)">Edit</button>
+     <button (click)="deleteTask(task)">Delete</button>
+ </ul>-->
+
+
+ <mat-card class="mst-card" >
+  <mat-card-title>My Lists</mat-card-title>
+  <mat-card-actions>
+      <div *ngIf="empty">
+      <h1>please put the list</h1>
+    </div>
+    <mat-form-field>
+  <input matInput placeholder="newTask" value="" [(ngModel)]="newTask">
+</mat-form-field>
+  <br>
+  <br>
+  <mat-form-field>
+  <input matInput placeholder="newPriority" value="" [(ngModel)]="newPriority">
+</mat-form-field>
+  
+<br>
+<br>
+<button mat-button (click)="addNew()">Add List!</button>
+<ul *ngFor="let task of tasks">
+ 
+{{task.taskName}} 
+{{task.priority}}
+<button mat-button color="primary" (click)="editTask(task)"><mat-icon>edit</mat-icon></button>
+<button mat-button color="primary" (click)="deleteTask(task)"><mat-icon>delete</mat-icon></button>
+</ul>
+
+</mat-card-actions>
+ </mat-card>
+
+
+ 
 <router-outlet></router-outlet>
-</body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
